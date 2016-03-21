@@ -4,6 +4,7 @@
 #include <QTextStream>
 #include <QJsonObject>
 #include <QJsonDocument>
+#include <QJsonArray>
 #include <QDebug>
 
 //    QProcess process;
@@ -24,7 +25,13 @@ int main(int argc, char *argv[])
 
     QJsonObject obj = jsonDoucment.object();
 
-    qDebug() << obj;
+    QJsonArray container = obj["steamclient.dll"].toArray();
+
+    foreach (QJsonObject var, container) {
+        var["offset"].toInt();
+        var["name"].toString();
+        var["signature"].toString();
+    }
 
     return a.exec();
 }
