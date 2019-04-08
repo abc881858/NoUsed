@@ -13,10 +13,10 @@ MainWindow::MainWindow(QWidget *parent) :
 
     QNetworkProxy proxy;
     proxy.setType(QNetworkProxy::HttpProxy);
-    proxy.setHostName("proxyhk.huawei.com");
+    proxy.setHostName("");
     proxy.setPort(8080);
-    proxy.setUser("wwx556609");
-    proxy.setPassword("a#yMn4!4");
+    proxy.setUser("");
+    proxy.setPassword("");
     QNetworkProxy::setApplicationProxy(proxy);
 
     manager = new QNetworkAccessManager(this);
